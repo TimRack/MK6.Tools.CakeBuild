@@ -31,9 +31,6 @@ Setup(context =>
         )
     );
 
-    if(TeamCity.IsRunningOnTeamCity)
-        StartProcess("git", "fetch --tags");
-
     parameters.SetBuildVersion(
         BuildVersion.CalculatingSemanticVersion(
             context: Context,
